@@ -10,6 +10,13 @@ type Price = {
 };
 
 export type RoomAvailability = {
-    availabilityStatus: string;
+    availabilityStatus: AvailabilityStatus;
     price: Price;
 };
+
+export enum AvailabilityStatus {
+    Available = 'available',
+    OnRequest = 'onRequest',
+    SoldOut = 'soldOut',
+    Error = 'error',
+}

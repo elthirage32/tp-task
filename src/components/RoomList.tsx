@@ -20,11 +20,7 @@ const RoomList = () => {
 
     return (
         <div>
-            <ul>
-                {sortedRooms.map((room) => (
-                    <RoomItem key={room.id} room={room} />
-                ))}
-            </ul>
+            <ul>{sortedRooms?.map((room) => <RoomItem key={room.id} room={room} />)}</ul>
         </div>
     );
 };
